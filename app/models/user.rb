@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:linkedin, :facebook, :gplus, :twitter, :tumblr],
          :authentication_keys => [:nickname]
   validate :nickname_uniqueness
+  has_many :posts
+  has_many :comments
 
   def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
