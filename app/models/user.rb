@@ -5,9 +5,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:linkedin, :facebook, :gplus, :twitter, :tumblr],
          :authentication_keys => [:nickname]
-  validate :nickname_uniqueness
+  validates_uniqueness_of :nickname
   has_many :posts
   has_many :comments
+  validate :columns_present
 
   def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -21,7 +22,15 @@ class User < ActiveRecord::Base
         user.password = Devise.friendly_token[0,20]
       end
   end
-  def nickname_uniqueness
-    self.errors.add(:base, 'Username has already been taken') if User.where(:nickname => self.nickname).exists?
+  def columns_present
+    if (self.nickname === "")
+      self.errors.add(:base, 'Username can\'t be blank')
+    end
+    if (self.first_name === "")
+      self.errors.add(:base, 'Name can\'t be blank')
+    end
+    if (self.last_name === "")
+      self.errors.add(:base, 'Name can\'t be blank')
+    end
   end
 end
