@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :comments
-  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks", :registrations => "registrations" }
   resources :posts do
     resources :comments
   end
