@@ -27,10 +27,10 @@ class User < ActiveRecord::Base
       self.errors.add(:base, 'Username can\'t be blank')
     end
     if (self.first_name === "")
-      self.errors.add(:base, 'Name can\'t be blank')
+      self.errors.add(:base, 'First Name can\'t be blank')
     end
     if (self.last_name === "")
-      self.errors.add(:base, 'Name can\'t be blank')
+      self.errors.add(:base, 'First Name can\'t be blank')
     end
   end
 end
