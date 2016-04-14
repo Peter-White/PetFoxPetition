@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header id="header" class="header">
+<% if user_signed_in? %>
+  <% if current_user.image == "" %>
+    <div class="thumbnail">
+      <img src='http://freevector.co/wp-content/uploads/2014/09/1954-face-with-a-question-mark7.png' class="img-thumbnail" alt="profile-pic"/>
+    </div>
+  <% else %>
+    <div class="thumbnail">
+      <img src='<%= current_user.image %>' class="img-thumbnail" alt="profile-pic"/>
+    </div>
+  <% end %>
+  <%= link_to current_user.nickname, edit_user_registration_path %>
+<% end %>
+</header>
 
   <p class="alert"><%= alert %></p>
 
