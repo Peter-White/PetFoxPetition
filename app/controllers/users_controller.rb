@@ -14,4 +14,9 @@ class UsersController < ApplicationController
     render json: @user
   end
 
+  def count
+    count = User.count
+    render json: {count: count}
+  end
+
 end
