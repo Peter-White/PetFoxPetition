@@ -16,7 +16,6 @@ class UsersController < ApplicationController
 
   def count
     count = User.count
-    render json: {count: count}
   end
 
 end

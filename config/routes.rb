@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'wrongnumbersong/user/:id' => 'users#show'
   get 'wrongnumbersong/users' => 'users#index'
-  get 'wrongnumbersong/user-count', to: 'users#count'
 
-  root 'posts#index'
+  # root 'posts#index'
+  root 'users#count'
 end
