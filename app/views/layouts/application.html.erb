@@ -5,11 +5,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="icon" href="/assets/free_to_use_fox_icon_by_xxadamantdahkittehxx-d5m2ahg">
 </head>
 <body>
 <header id="header" class="header">
-  <div id="icon"></div>
-  <h1>American Pet Fox Petition</h1>
+  <div id="icon" onClick="location.href='/'"></div>
+  <h1 onClick="location.href='/'">American Pet Fox Petition</h1>
+  <%= link_to 'Forums', posts_path %>
   <div id="buttons">
     <% if user_signed_in? %>
       <%= link_to current_user.nickname, edit_user_registration_path %>

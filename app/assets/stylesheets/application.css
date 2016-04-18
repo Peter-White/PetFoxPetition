@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-.thumbnail {
+ .thumbnail {
   position: relative;
   width: 200px;
   height: 200px;
@@ -35,13 +35,24 @@
 }
 .header {
   background-color: red;
+  height: 100px;
+  border-radius: 50px;
+  background-image: url(/assets/leaf-pattern-background-vector);
+}
+.header h1 {
+  float: left;
+  padding-top: 20px;
+  padding-left: 5px;
+  cursor: pointer;
 }
 #icon {
   background-image: url(/assets/ht_pudding_the_fox_04_mt_140821_4x3_992.jpg);
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 200px 200px;
+  background-size: 100px 100px;
   border-radius: 50%;
+  float: left;
+  cursor: pointer;
 }
