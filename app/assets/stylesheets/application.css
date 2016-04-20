@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  background-color: #b3ffb3;
+ }
  .thumbnail {
   position: relative;
   width: 200px;

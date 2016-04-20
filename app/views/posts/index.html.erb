@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Posts</h1>
+<h1>Pet Fox Petition Forums</h1>
 
-<table>
+<table id="forumtable">
   <thead>
     <tr>
-      <th>Title</th>
+      <th style="text-decoration: underline">Title</th>
       <th colspan="3"></th>
-      <th>Created</th>
+      <th style="text-decoration: underline">Created</th>
       <th colspan="3"></th>
-      <th>Author</th>
+      <th style="text-decoration: underline">Author</th>
     </tr>
   </thead>
 
@@ -30,9 +30,7 @@
 <div id="buttons">
   <% if user_signed_in? %>
     <%= link_to 'New Post', new_post_path %>
-    <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
   <% else %>
-    <%= link_to 'Sign Up', new_user_registration_path %>
-    <%= link_to 'Sign In', new_user_session_path %>
+  <h3>Login to create a new topic.</h3>
   <% end %>
 </div>

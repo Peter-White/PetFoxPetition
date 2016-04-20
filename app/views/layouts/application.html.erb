@@ -9,9 +9,9 @@
 </head>
 <body>
 <header id="header" class="header">
-  <div id="icon"></div>
-  <h1><span style="color:red">Pet</span> <span style="color:gold">Fox</span> <span style="color:white">Petition</span></h1>
-  <%= link_to 'Forums' posts_index_path %>
+  <div id="icon" onClick="location.href='/'"></div>
+  <h1 onClick="location.href='/'"><span style="color:red">Pet</span> <span style="color:gold">Fox</span> <span style="color:white">Petition</span></h1>
+  <%= link_to 'Forums', posts_path %>
   <div id="buttons">
     <% if user_signed_in? %>
       <%= link_to current_user.nickname, edit_user_registration_path %>
