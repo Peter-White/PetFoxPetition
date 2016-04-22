@@ -63,27 +63,23 @@
   width: 100%;
   display: -webkit-flex;
   -webkit-flex-direction: row;
-
+  position: center;
   display: flex;
   flex-direction: row;
 }
 
-#paws, #paws2{
+#paws {
+  float: left;
   background-image: url('/assets/paw-print-163554_960_720_green2.png');
   width: 5%;
   background-repeat: repeat-y;
   background-size: 70px;
   vertical-align: top;
 }
-#paws {
-  float: left;
-}
-
-#paws2 {
-  float: right;
-}
 
 .pagecontent {
-  width: 90%;
+  width: 88%;
   min-height: 1000px;
+  padding-right: 1%;
+  padding-left: 1%;
 }
