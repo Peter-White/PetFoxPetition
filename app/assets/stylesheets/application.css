@@ -39,7 +39,6 @@
 .header {
   background-color: red;
   height: 100px;
-  border-radius: 50px;
   background-image: url(/assets/15-green-leaf-pattern);
 }
 .header h1 {
@@ -58,4 +57,34 @@
   border-radius: 50%;
   float: left;
   cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+
+  display: flex;
+  flex-direction: row;
+}
+
+#paws, #paws2{
+  background-image: url('/assets/paw-print-163554_960_720_green2.png');
+  width: 5%;
+  background-repeat: repeat-y;
+  background-size: 70px;
+  vertical-align: top;
+}
+#paws {
+  float: left;
+}
+
+#paws2 {
+  float: right;
+}
+
+.pagecontent {
+  background-color: red;
+  width: 90%;
+  min-height: 1000px;
 }

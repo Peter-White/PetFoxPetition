@@ -25,7 +25,13 @@
 
   <p class="alert"><%= alert %></p>
 
-  <%= yield %>
+<div id="container" class="container">
+  <div id="paws"></div>
+  <div id="pagecontent" class="pagecontent">
+    <%= yield %>
+  </div>
+  <div id="paws2"></div>
+</div>
 
 <footer>
   <a href="https://github.com/Peter-White/PetFoxPetition">View on Github</a>
