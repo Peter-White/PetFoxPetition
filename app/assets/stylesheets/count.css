@@ -1,0 +1,21 @@
+.imagegallery {
+    display: -webkit-flex;
+    position: center;
+    display: flex;
+    -webkit-flex-wrap: wrap; /* Safari */
+     flex-wrap:         wrap;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+.img {
+   width: 200px;
+   height: 200px;
+   text-align: center;
+   justify-content: center;
+   padding-left: 7%;
+   padding-bottom: 2%;
+}
+.img img {
+  max-width:100%;
+  max-height:100%;
+}
