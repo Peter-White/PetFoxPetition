@@ -27,3 +27,15 @@
   max-width: 100%;
   max-height: 100%;
 }
+
+#intro {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.counter {
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Nunito', sans-serif;
+}
