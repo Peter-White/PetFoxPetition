@@ -20,24 +20,20 @@
       </div>
     </a>
 
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-    </div>
-
-    <div id="buttons">
-      <% if user_signed_in? %>
-        <%= link_to current_user.nickname, edit_user_registration_path %>
-        <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
-      <% else %>
+    <% if user_signed_in? %>
+      <div class="dropdown">
+        <img src='<%= current_user.image %>' onclick="myFunction()" class="dropbtn"/>
+          <div id="myDropdown" class="dropdown-content">
+           <%= link_to current_user.nickname, edit_user_registration_path %>
+           <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+          </div>
+      </div>
+    <% else %>
+      <div id="buttons">
         <%= link_to 'Sign Up', new_user_registration_path %>
         <%= link_to 'Sign In', new_user_session_path %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
 </header>
 
   <p class="alert"><%= alert %></p>
