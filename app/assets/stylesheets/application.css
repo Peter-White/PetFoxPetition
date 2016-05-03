@@ -17,27 +17,6 @@
   background-color: #b3ffb3;
  }
 
- /*.thumbnail {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-}
-.thumbnail img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
-}
-.thumbnail img.portrait {
-  width: 100%;
-  height: auto;
-}*/
-
 .header {
   height: 100px;
   background-image: url(/assets/15-green-leaf-pattern);
@@ -116,4 +95,26 @@ footer h2 {
   text-align: center;
   margin-left: 20%;
   margin-top: 10px;
+}
+
+.buttons {
+  float: left;
+  margin-left: 390px;
+  font-size: 30px;
+}
+
+.buttons a:link {
+    color: rgb(204, 204, 204);
+}
+
+.buttons a:visited {
+    color: rgb(153, 153, 153);
+}
+
+.buttons a:hover {
+    color: white;
+}
+
+.buttons a:active {
+    color: white;
 }
