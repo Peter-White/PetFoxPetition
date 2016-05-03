@@ -1,19 +1,17 @@
 .dropbtn {
-  background-color: #4CAF50;
+  background: linear-gradient(red, orange);
   color: white;
   padding: 8px;
-  border: none;
   cursor: pointer;
-
-  &:hover, &:focus {
-    background-color: #3e8e41;
-  }
+  width: 84px;
+  height: 84px;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
   float: left;
+  margin-left: 400px;
 }
 
 .dropdown-content {
