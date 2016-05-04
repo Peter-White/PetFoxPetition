@@ -1,6 +1,8 @@
 <div class="comment">
+  <img src='<%= comment.user.image %>'/>
+  <h3 id="name"><%= comment.user.nickname %></h3>
+  <h3 id="date"><%= comment.created_at %></h3>
   <p><%= comment.comment %></p>
-  <p><%= comment.user.nickname %></p>
   <% if user_signed_in? %>
     <% if current_user.email === comment.user.email %>
       <%= link_to "Edit", edit_post_comment_path(comment.post, comment) %>

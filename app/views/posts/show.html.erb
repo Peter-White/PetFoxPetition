@@ -11,7 +11,6 @@
 </p>
 
 <div id="comments">
-  <h2><%= @post.comments.count %></h2>
   <%= render @post.comments %>
 </div>
 <% if user_signed_in? %>
