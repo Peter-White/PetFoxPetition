@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
         user.password = Devise.friendly_token[0,20]
       end
   end
+
   def columns_present
     if (self.nickname === "")
       self.errors.add(:base, 'Username can\'t be blank')

@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+var link = document.getElementsByClassName('dropdown-content')[0];

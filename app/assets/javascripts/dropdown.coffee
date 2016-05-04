@@ -1,4 +1,4 @@
-@myFunction = ->
+@dropIt = ->
   document.getElementById('myDropdown').classList.toggle 'show'
   return
 
