@@ -1,10 +1,35 @@
+// Div: .dropdown = .thumbnail
+// Img: .dropbtn = img
+
+// .thumbnail {
+//         position: relative;
+//         width: 100px;
+//         height: 100px;
+//         overflow: hidden;
+//         float: left;
+
+//         img {
+//           position: absolute;
+//           left: 50%;
+//           top: 50%;
+//           height: 100%;
+//           width: auto;
+//           -webkit-transform: translate(-50%,-50%);
+//               -ms-transform: translate(-50%,-50%);
+//                   transform: translate(-50%,-50%);
+//         }
+
+//         img.portrait {
+//           width: 100%;
+//           height: auto;
+//         }
+
 .dropbtn {
-  background: linear-gradient(red, orange);
   color: white;
   padding: 8px;
   cursor: pointer;
-  width: 84px;
-  height: 84px;
+  height: 100%;
+  width: auto;
 }
 
 .dropdown {
@@ -12,6 +37,8 @@
   display: inline-block;
   float: left;
   margin-left: 400px;
+  width: 80px;
+  height: 80px;
 }
 
 .dropdown-content {
