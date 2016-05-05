@@ -3,8 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .comment {
   border: solid;
+  max-width: 100%;
 
-  img {float: left;}
-  #name {float: left;}
+  #name {float: left; padding-left: 1%;}
+  #date {float: right; padding-right: 1%;}
+  img {float: left; padding: 10px;}
+  #content {padding-left: 112px; padding-right: 10px;}
 
+  #edit {
+    text-align: right;
+
+    a {padding-right: 5px;}
+
+  }
 }

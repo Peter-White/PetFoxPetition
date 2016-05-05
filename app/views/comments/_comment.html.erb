@@ -1,12 +1,20 @@
 <div class="comment">
   <img src='<%= comment.user.image %>'/>
-  <h3 id="name"><%= comment.user.nickname %></h3>
-  <h3 id="date"><%= comment.created_at %></h3>
-  <p><%= comment.comment %></p>
+  <div id="namedate" class="namedate">
+    <h3 id="name"><%= comment.user.nickname %></h3>
+    <h3 id="date"><%= comment.created_at %></h3>
+  </div>
+  <br>
+  <br>
+  <div class="content" id="content">
+    <p><%= comment.comment %></p>
+  </div>
   <% if user_signed_in? %>
     <% if current_user.email === comment.user.email %>
-      <%= link_to "Edit", edit_post_comment_path(comment.post, comment) %>
-      <%= link_to "Delete", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" } %>
+      <div id="edit">
+        <%= link_to "Edit", edit_post_comment_path(comment.post, comment) %>
+        <%= link_to "Delete", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
     <% end %>
   <% end %>
 </div>
