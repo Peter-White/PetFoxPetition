@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="showpost" id="showpost">
+  <h3 id="showtitle">
+    <strong>Title:</strong>
+    <%= @post.title %>
+  </h3>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+  <p>
+    <%= @post.content %>
+  </p>
+</div>
 
 <div id="comments">
   <%= render @post.comments %>
