@@ -1,44 +1,44 @@
-// Div: .dropdown = .thumbnail
+// Div: .dropdown = .img
 // Img: .dropbtn = img
 
-// .thumbnail {
-//         position: relative;
-//         width: 100px;
-//         height: 100px;
-//         overflow: hidden;
-//         float: left;
+// .img {
+//   width: 200px;
+//   height: 200px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   resize: both;
+//   margin-left: 1.5%;
+//   margin-bottom: 2%;
+//   cursor: pointer;
+//   background-color: rgba(255, 0, 0, 0.7);
+//   padding: 1% 1% 1% 1%;
+//   border-radius: 10px;
 
-//         img {
-//           position: absolute;
-//           left: 50%;
-//           top: 50%;
-//           height: 100%;
-//           width: auto;
-//           -webkit-transform: translate(-50%,-50%);
-//               -ms-transform: translate(-50%,-50%);
-//                   transform: translate(-50%,-50%);
-//         }
+//   img {
+//     max-width: 100%;
+//     max-height: 100%;
+//   }
+// }
 
-//         img.portrait {
-//           width: 100%;
-//           height: auto;
-//         }
 
-.dropbtn {
-  color: white;
-  padding: 8px;
-  cursor: pointer;
-  height: 100%;
-  width: auto;
-}
 
 .dropdown {
-  position: relative;
+  background-color: white;
   display: inline-block;
   float: left;
   margin-left: 400px;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  text-align: center;
+  resize: both;
+  cursor: pointer;
+
+    .dropbtn {
+       max-width: 100%;
+       max-height: 100%;
+    }
 }
 
 .dropdown-content {

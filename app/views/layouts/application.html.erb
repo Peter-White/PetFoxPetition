@@ -21,8 +21,8 @@
     </a>
 
     <% if user_signed_in? %>
-      <div class="dropdown">
-        <img src='<%= current_user.image %>' onclick="dropIt()" class="dropbtn"/>
+      <div class="dropdown" onclick="dropIt()">
+        <img src='<%= current_user.image %>' class="dropbtn"/>
           <div id="myDropdown" class="dropdown-content">
            <%= link_to current_user.nickname, edit_user_registration_path %>
            <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
