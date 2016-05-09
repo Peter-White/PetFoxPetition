@@ -4,15 +4,23 @@
 </ul>
 
 <div id="currentprofile" class="tabcontent">
-  <h2><%= current_user.nickname %></h2>
-  <img src="<%= current_user.image %>"/>
-  <h2><%= current_user.first_name %></h2>
-  <h2><%= current_user.last_name %></h2>
-  <h2><%= current_user.email %></h2>
+  <label>Username</label>
+  <h3><%= current_user.nickname %></h3>
+  <label>Profile Pic</label>
+  <br>
+  <br>
+  <img src="<%= current_user.image %>" id="profilepic"/>
+  <h3>Url: <%= current_user.image %></h3>
+  <label>First Name</label>
+  <h3><%= current_user.first_name %></h3>
+  <label>Last Name</label>
+  <h3><%= current_user.last_name %></h3>
+  <label>Email Address</label>
+  <h3><%= current_user.email %></h3>
 </div>
 
 <div id="editprofile" class="tabcontent">
-  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <h2>Edit <%= resource_name.to_s.humanize %> Profile</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>

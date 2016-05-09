@@ -31,3 +31,13 @@
     border: 1px solid #ccc;
     border-top: none;
 }
+
+#currentprofile {
+    #profilepic {
+        max-height: 300px;
+    }
+    label {
+        font-size: 20px;
+        text-decoration: underline;
+    }
+}
