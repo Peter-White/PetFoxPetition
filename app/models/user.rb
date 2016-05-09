@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :comments
   validate :columns_present
+  validate :anonymous
 
   def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -32,6 +33,11 @@ class User < ActiveRecord::Base
     end
     if (self.last_name === "")
       self.errors.add(:base, 'Last Name can\'t be blank')
+    end
+  end
+  def anonymous
+    if (self.image === "")
+      self.image = "http://www.caribbeanmemoryproject.com/uploads/3/9/6/8/39688192/815731.jpg";
     end
   end
 end
