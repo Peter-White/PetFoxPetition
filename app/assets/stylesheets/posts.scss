@@ -4,7 +4,21 @@
 .showpost {
   border: solid;
   padding: 0 1%;
-
-  #showtitle {}
 }
 
+#post_title {
+  width: 30%;
+  font-size: 15px;
+}
+
+#post_content {
+  font-size: 15px;
+  min-height: 100px;
+  min-width: 30%;
+}
+
+#forumtable {
+  border: solid;
+  width: 100%;
+  text-align: left;
+}
