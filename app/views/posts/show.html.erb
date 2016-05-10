@@ -2,10 +2,9 @@
 
 <div class="showpost" id="showpost">
   <h3 id="showtitle">
-    <strong>Title:</strong>
-    <%= @post.title %>
+    <strong><%= @post.title %></strong>
   </h3>
-
+  <hr>
   <p>
     <%= @post.content %>
   </p>
@@ -15,7 +14,7 @@
   <%= render @post.comments %>
 </div>
 <% if user_signed_in? %>
-  <h3>Replay to thread</h3>
+  <h3>Reply to thread</h3>
   <%= render "comments/form" %>
   <% if user_signed_in? %>
     <% if current_user.email === @post.user.email %>
