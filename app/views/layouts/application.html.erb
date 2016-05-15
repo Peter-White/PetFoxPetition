@@ -22,7 +22,7 @@
 
     <% if user_signed_in? %>
       <div class="dropdown" onclick="dropIt()">
-        <h3 class="dropbtn"><%= current_user.nickname %></h3>
+        <h3 class="dropbtn"><%= current_user.name %></h3>
           <div id="myDropdown" class="dropdown-content">
            <%= link_to "Edit Profile", edit_user_registration_path %>
            <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>

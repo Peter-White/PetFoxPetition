@@ -4,19 +4,19 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:linkedin, :facebook, :gplus, :twitter, :tumblr],
-         :authentication_keys => [:nickname]
-  validates_uniqueness_of :nickname
+         :authentication_keys => [:email]
   has_many :posts
   has_many :comments
   validate :columns_present
   validate :anonymous
+  validate :namecombo
 
   def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
         user.provider = auth.provider
         user.uid = auth.uid
+        user.name = auth.info.name
         user.image = auth.info.image
-        user.nickname = auth.info.nickname
         user.first_name = auth.info.first_name
         user.last_name = auth.info.last_name
         user.email = auth.info.email
@@ -24,10 +24,13 @@ class User < ActiveRecord::Base
       end
   end
 
-  def columns_present
-    if (self.nickname === "")
-      self.errors.add(:base, 'Username can\'t be blank')
+  def namecombo
+    if (self.name === nil)
+      self.name = self.first_name + " " + self.last_name;
     end
+  end
+
+  def columns_present
     if (self.first_name === "")
       self.errors.add(:base, 'First Name can\'t be blank')
     end

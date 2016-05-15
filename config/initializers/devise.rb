@@ -14,4 +14,5 @@ Devise.setup do |config|
 
   # Omniauth Apps
     config.omniauth :linkedin, "77akb2wzj4892u", "UyDX9D2tUauWCM5R"
+    config.omniauth :facebook, "903602109748933", "fd56bde9dcd9a4e18c88f4c111cd46d1"
 end
