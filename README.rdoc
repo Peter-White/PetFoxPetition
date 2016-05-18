@@ -9,4 +9,3 @@ A remake of a petition website made with the soul purpose of rasing awareness an
 * CSS
 * Devise
 * Omniauth
-*
