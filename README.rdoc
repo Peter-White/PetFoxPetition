@@ -1,2 +1,12 @@
 == README
 
+A remake of a petition website made with the soul purpose of rasing awareness and generating interest in legalizing the ability to keep foxes as pets as well as it's own forum for users to interact with each other. This site was crafted using a Ruby on Rails framework with a postgresql database in which users can register their own account through Facebook, LinkedIn and locally. Every registery is counted and the sum total is displayed of the front page. Any vistitor is able to view the site forum and anything posted within but ony registered users may add their own posts and comments. The technologies used are:
+
+* Ruby on Rails
+* postgresql
+* Javascript
+* HTML
+* CSS
+* Devise
+* Omniauth
+*
